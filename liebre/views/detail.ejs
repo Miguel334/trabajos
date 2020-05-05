@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<!-- Bootstrap Grid Stylesheet -->
+	 <link rel="stylesheet" href="/stylesheets/bootstrap-grid.min.css">
+	<!-- Own Stylesheet -->
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title><% title %> </title>
+</head>
+<body>
+    <%- include('./partials/header')  %> 
+    <div class="container ">
+		<div class="row">
+            <div class="col-12 col-sm-12 col-lg-12">
+                <section class="box row">
+                    
+                        <figure class="box-img col-lg-8">
+                            <img src="/images/products/<%=producto.image%> " alt="imagen de producto">
+                            <p><%= producto.description %> </p>
+                        </figure>
+                        <article class="box-mens col-lg-4">
+                             
+                               <h3><strong> <%=producto.name  %></strong></h3>
+
+                            <%let preciofinal=  producto.price-(producto.discount* producto.price/100)
+                              preciofinal=Math.round(preciofinal)
+                            %> 
+
+                               <% if (producto.discount!=0) {%>
+                                <span class="tachar"><%=producto.price%> </span>
+                                <span ><%=producto.discount %>% OFF</span>
+                            <%}%>
+                            
+                            <h2>$<%=miles( preciofinal)%> </h2>
+                            <div class="mar"> <i class="fas fa-credit-card "></i>
+                                <span class="gris">paga en 12 cuotas sin interes</span>
+                            </div>
+                           
+                            <div class="mar">  <i class="fas fa-store "></i>
+                                <span class="gris">retiros gratis en locales del vendedor</span>
+                            </div>
+                          
+                            
+                            <p class="but"><button class="new">Comprar ahora </button></p>
+                            
+                        </article>
+        
+                </section>
+            </div>
+    
+        </div>
+   
+    </div>
+  
+    <%- include('./partials/footer')  %> 
+</body>
+</html>

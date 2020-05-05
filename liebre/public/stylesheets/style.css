@@ -1,0 +1,76 @@
+.box{
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 300ms;
+  margin: 20px 0;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.box-mens p{
+  font-size: 12px;
+}
+.box-mens h2{
+  font-size: 2.4em;
+  font-weight: 300;
+  margin: 0;
+}
+span{
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--green);
+  margin: 0 0 0 10px;
+}
+span.tachar{
+  font-size: 1.5em;
+  text-decoration: line-through;
+  font-weight: 300;
+  color: var(--green);
+  margin: 0 0 0 10px;
+}
+.fa-credit-card{
+  color: green;
+}
+span.gris{
+  font-size: 1.5em;
+  font-weight: 300;
+  color:  rgba(73, 21, 21, 0.9);
+  margin: 0 0 0 10px;
+}
+.fa-store{
+  color: green;
+}
+button.new{
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+ background-color: rgb(35, 64, 231) ;
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
+}
+p.but {
+  margin :3 !important;
+  text-align: center;
+}
+@media(min-width: 769px){
+p{
+  font-size: 16px;
+}
+h3 strong{
+  font-size: 26px;
+}
+h2{
+  font-size: 50px !important;
+}
+div.mar{
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+button.new{
+  width: 100%;
+}
+
+}
+
